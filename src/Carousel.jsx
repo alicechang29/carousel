@@ -15,6 +15,8 @@ import Card from "./Card";
  * App --> Carousel --> Card
  */
 function Carousel({ photos, title }) {
+  console.log("Carousel");
+
   const [currCardIdx, setCurrCardIdx] = useState(0);
 
   const currCard = photos[currCardIdx];
@@ -22,28 +24,39 @@ function Carousel({ photos, title }) {
 
   //Increments currCardIdx state by 1
   function goForward() {
-    setCurrCardIdx(currCardIdx + 1); //triggers re-rendering of page bc updating state
+    console.log("goForward");
+    setCurrCardIdx(currCardIdx + 1);
+
+  }
+  //Decrements currCardIdx state by 1
+  function goBack() {
+    console.log("goBack");
+    setCurrCardIdx(currCardIdx - 1);
   }
 
-  //FIXME: BUG WITH LEFT ARROW CLICK (goBack)
   return (
     <div className="Carousel">
       <h1>{title}</h1>
       <div className="Carousel-main">
-        <i
-          className="bi bi-arrow-left-circle"
-          onClick={goForward}
-        />
+        {currCardIdx > 0 &&
+          <i
+            className="bi bi-arrow-left-circle"
+            onClick={goBack}
+          />
+        }
         <Card
           caption={currCard.caption}
           src={currCard.src}
           currNum={currCardIdx + 1}
           totalNum={total}
         />
-        <i
-          className="bi bi-arrow-right-circle"
-          onClick={goForward}
-        />
+        {currCardIdx < total - 1 &&
+          <i
+            className="bi bi-arrow-right-circle"
+            onClick={goForward}
+          />
+        }
+
       </div>
     </div>
   );
