@@ -4,17 +4,17 @@ import Card from "./Card";
 
 
 /** Carousel: displays images and arrows to navigate through them
- * 
+ *
  * Props:
  * - photos: array of {src, caption} objects
  * - title: string describing the collection of images
- * 
+ *
  * State:
  * - currCardIdx: integer for current card index
- * 
+ *
  * App --> Carousel --> Card
  */
- function Carousel({ photos, title }) {
+function Carousel({ photos, title }) {
   const [currCardIdx, setCurrCardIdx] = useState(0);
 
   const currCard = photos[currCardIdx];
@@ -22,9 +22,10 @@ import Card from "./Card";
 
   //Increments currCardIdx state by 1
   function goForward() {
-    setCurrCardIdx(currCardIdx + 1);
+    setCurrCardIdx(currCardIdx + 1); //triggers re-rendering of page bc updating state
   }
 
+  //FIXME: BUG WITH LEFT ARROW CLICK (goBack)
   return (
     <div className="Carousel">
       <h1>{title}</h1>
