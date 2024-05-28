@@ -1,0 +1,130 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot tests for stability > matches having both arrows when not on first or last image 1`] = `
+<div>
+  <div
+    class="Carousel"
+  >
+    <h1>
+      images for testing
+    </h1>
+    <div
+      class="Carousel-main"
+    >
+      <i
+        class="bi bi-arrow-left-circle"
+      />
+      <div
+        class="Card"
+      >
+        <h4
+          class="Card-title"
+        >
+          testing image 2
+        </h4>
+        <img
+          alt="testing image 2"
+          class="Card-image"
+          src="test2.com"
+        />
+        <small
+          class="Card-small"
+        >
+          Image 
+          2
+           of 
+          3
+          .
+        </small>
+      </div>
+      <i
+        class="bi bi-arrow-right-circle"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshot tests for stability > matches hiding right arrow when on last image 1`] = `
+<div>
+  <div
+    class="Carousel"
+  >
+    <h1>
+      images for testing
+    </h1>
+    <div
+      class="Carousel-main"
+    >
+      <i
+        class="bi bi-arrow-left-circle"
+      />
+      <div
+        class="Card"
+      >
+        <h4
+          class="Card-title"
+        >
+          testing image 3
+        </h4>
+        <img
+          alt="testing image 3"
+          class="Card-image"
+          src="test3.com"
+        />
+        <small
+          class="Card-small"
+        >
+          Image 
+          3
+           of 
+          3
+          .
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshot tests for stability > matches initial carousel on start 1`] = `
+<div>
+  <div
+    class="Carousel"
+  >
+    <h1>
+      images for testing
+    </h1>
+    <div
+      class="Carousel-main"
+    >
+      <div
+        class="Card"
+      >
+        <h4
+          class="Card-title"
+        >
+          testing image 1
+        </h4>
+        <img
+          alt="testing image 1"
+          class="Card-image"
+          src="test1.com"
+        />
+        <small
+          class="Card-small"
+        >
+          Image 
+          1
+           of 
+          3
+          .
+        </small>
+      </div>
+      <i
+        class="bi bi-arrow-right-circle"
+      />
+    </div>
+  </div>
+</div>
+`;
