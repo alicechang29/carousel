@@ -32,8 +32,14 @@ it("has the correct alt text & src", function () {
 });
 // end
 
-// it("matches snapshot", function () {
-//   const { container } = render(<Card rank="A" suit="C" />);
-//   expect(container).toMatchSnapshot();
-// });
+it("matches snapshot", function () {
+  const { container } = render(
+    <Card
+      caption="Photo by Richard Pasquarella on Unsplash"
+      src={image1}
+      currNum="1"
+      totalNum="3"
+    />);
+  expect(container).toMatchSnapshot();
+});
 // end
